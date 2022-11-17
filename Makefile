@@ -13,7 +13,7 @@ install:
 .PHONY: install
 
 start:
-	uvicorn main:app --reload
+	python main.py
 .PHONY: start
 
 build:

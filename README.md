@@ -4,7 +4,8 @@ This repo should be used as a template to quickly bootstrap a Python Microservic
 
 ## Features
 
-- **FastAPI** is used to expose the microservice
+- **FastAPI** is used to expose the microservice with REST APIs
+- **Uvicorn** is an ASGI web server for Python
 - **Container ready** with Docker
 
 ## Setup
