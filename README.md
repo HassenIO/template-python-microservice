@@ -69,3 +69,23 @@ curl localhost:8080/
 
 {"message":"Hello World!"}
 ```
+
+## Docker build & run
+
+To build the docker image of the microservice, simply run:
+
+```commandline
+make build
+```
+
+This will create a Docker image that bundle the app, and gives it the name `$(image):$(tag)` wher the variables `image` and `tag` are located in the Makefile.
+
+Make sure to set the `image` name value to your needs, while keeping updating the `tag` value on releases.
+
+Tu run the docker container from the image, run:
+
+```commandline
+make run
+```
+
+Which will expose the app on port 8080. Note that when exiting the server ran with `make run`, the container is destroyed.

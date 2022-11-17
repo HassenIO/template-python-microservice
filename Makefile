@@ -1,3 +1,5 @@
+tag = 0.1.0
+
 compile:
 	pip-compile --output-file=requirements.txt requirements.in &> /dev/null
 .PHONY: compile
@@ -13,3 +15,10 @@ install:
 start:
 	uvicorn main:app --reload
 .PHONY: start
+
+build:
+	docker build --tag python-microservice:$(tag) .
+.PHONY: build
+
+run:
+	docker run --rm -e PORT=8080 -p 8080:8080 --name python-microservice python-microservice:$(tag)
